@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<a href="/logout">  <button type="submit">Logout </button>
+</a>
+
+
+   <!-- Main Content -->
+   <table class="table">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+ <tbody>
+
+
+        {% for p1 in n1%}
+      <tr>
+        <td>{{p1.id}}</td>
+        <td>{{p1.name}}</td>
+        <td>{{p1.email}}</td>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
